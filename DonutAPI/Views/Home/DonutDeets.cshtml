@@ -1,0 +1,15 @@
+﻿
+
+<h2>Donut Deets</h2>
+
+     <section>
+         <p>Depiction:</p><img src="@ViewBag.ThisDonut["photo"]" style="width:50%;height:50%;"/>
+         <p>Donut Demographics: @ViewBag.ThisDonut["name"]</p>
+         <p>Diet Detriment: @ViewBag.ThisDonut["calories"] calories</p>
+         <p>Dank Details: </p>
+         @for (int i = 0; i < @ViewBag.ThisDonut["extras"].Count; i++)
+         {
+             <ul>@ViewBag.ThisDonut["extras"][i]</ul>
+         }
+     </section>
+ 

@@ -1,0 +1,14 @@
+﻿@using Newtonsoft.Json.Linq;
+@ViewBag.Error
+<h1>DONUTS!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+@if (TempData["donuts"] != null)
+{
+    JToken temp = (JToken)TempData["donuts"];
+    foreach(var donut in temp)
+    {
+        <ul>
+            <a href="/Home/DonutDeets?id=@donut["id"]">@donut["name"]</a>
+        </ul>
+    }
+
+}
